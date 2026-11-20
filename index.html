@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مدبّر | إدارة أموالك بذكاء</title>
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- sidebar -->
+      <aside class="sidebar" aria-label="القائمة الجانبية">
+        <div class="sidebar__inner">
+          <header class="brand">
+            <span class="brand__mark">
+              <img class="icon" src="assets/icons/coins-solid-full.png" alt="" />
+            </span>
+            <span class="brand__text">
+              <span class="brand__name">مدبّر</span>
+              <span class="brand__tagline">إدارة أموالك بذكاء</span>
+            </span>
+          </header>
+
+          <nav class="nav" aria-label="التنقل الرئيسي">
+            <ul class="nav__list">
+              <li>
+                <a class="nav__link is-active" href="#" aria-current="page">
+                  <img class="icon" src="assets/icons/house-solid-full.png" alt="" />
+                  <span class="nav__label">الصفحة الرئيسية</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav__link" href="#">
+                  <img
+                    class="icon"
+                    src="assets/icons/arrow-right-arrow-left-solid-full.png"
+                    alt=""
+                  />
+                  <span class="nav__label">المعاملات</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav__link" href="#">
+                  <img class="icon" src="assets/icons/chart-pie-solid-full.png" alt="" />
+                  <span class="nav__label">الميزانيات</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav__link" href="#">
+                  <img class="icon" src="assets/icons/piggy-bank-solid.png" alt="" />
+                  <span class="nav__label">المدخرات</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav__link" href="#">
+                  <img
+                    class="icon"
+                    src="assets/icons/file-invoice-dollar-solid-full.png"
+                    alt=""
+                  />
+                  <span class="nav__label">الفواتير الشهرية</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <section class="quick" aria-labelledby="quick-title">
+            <h2 class="quick__title" id="quick-title">إجراءات سريعة</h2>
+            <div class="quick__list">
+              <button class="action action--send" type="button">
+                <span class="action__icon">
+                  <img class="icon" src="assets/icons/paper-plane-solid-full.png" alt="" />
+                </span>
+                <span class="action__label">إرسال أموال</span>
+              </button>
+              <button class="action action--add" type="button">
+                <span class="action__icon">
+                  <img class="icon" src="assets/icons/plus-solid-full.png" alt="" />
+                </span>
+                <span class="action__label">إضافة أموال</span>
+              </button>
+              <button class="action action--bill" type="button">
+                <span class="action__icon">
+                  <img class="icon" src="assets/icons/receipt-solid-full.png" alt="" />
+                </span>
+                <span class="action__label">دفع فاتورة</span>
+              </button>
+              <button class="action action--invest" type="button">
+                <span class="action__icon">
+                  <img class="icon" src="assets/icons/chart-line-solid-full.png" alt="" />
+                </span>
+                <span class="action__label">استثمار</span>
+              </button>
+            </div>
+          </section>
+        </div>
+      </aside>
+
+      <main class="main">
+        <!-- header -->
+        <header class="page-header">
+          <div class="page-header__bar">
+            <div class="page-header__brand">
+              <span class="page-header__mark">
+                <img class="icon" src="assets/icons/coins-solid-full.png" alt="" />
+              </span>
+              <span class="page-header__text">
+                <span class="page-header__title">مدبّر</span>
+                <span class="page-header__subtitle">إدارة أموالك بذكاء</span>
+              </span>
+              <span class="status">
+                <span class="status__dot"></span>
+                <span class="status__text">متصل</span>
+              </span>
+            </div>
+
+            <div class="page-header__tools">
+              <div class="page-header__buttons">
+                <button class="icon-button" type="button" aria-label="بحث">
+                  <img
+                    class="icon"
+                    src="assets/icons/magnifying-glass-solid-full.png"
+                    alt=""
+                  />
+                </button>
+                <button class="icon-button" type="button" aria-label="الإشعارات">
+                  <img class="icon" src="assets/icons/bell-regular-full.png" alt="" />
+                  <span class="badge">2</span>
+                </button>
+              </div>
+
+              <div class="profile">
+                <span class="profile__text">
+                  <span class="profile__name">سيف أسامة</span>
+                  <span class="profile__plan">حساب مميز</span>
+                </span>
+                <img
+                  class="profile__avatar"
+                  src="assets/avatar-1.jpg"
+                  alt="صورة المستخدم"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="status status--mobile">
+            <span class="status__dot"></span>
+            <span class="status__text">متصل</span>
+          </div>
+        </header>
+
+        <!-- summary cards -->
+        <section class="summary" aria-label="ملخص الحساب">
+          <article class="summary-card">
+            <p class="summary-card__label">الرصيد الحالي</p>
+            <p class="summary-card__value">8,450 جنية</p>
+            <div class="trend trend--up">
+              <img
+                class="trend__icon"
+                src="assets/icons/arrow-down-solid-full-green-up.png"
+                alt=""
+              />
+              <span>+2.5%</span>
+            </div>
+          </article>
+
+          <article class="summary-card">
+            <p class="summary-card__label">الدخل</p>
+            <p class="summary-card__value">15,000 جنية</p>
+            <div class="trend trend--up">
+              <img
+                class="trend__icon"
+                src="assets/icons/arrow-down-solid-full-green-up.png"
+                alt=""
+              />
+              <span>+8.2%</span>
+            </div>
+          </article>
+
+          <article class="summary-card">
+            <p class="summary-card__label">المصروفات</p>
+            <p class="summary-card__value">10,000 جنية</p>
+            <div class="trend trend--down">
+              <img
+                class="trend__icon"
+                src="assets/icons/arrow-down-solid-full-red.png"
+                alt=""
+              />
+              <span>-1.2%</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- widgets -->
+        <div class="widgets">
+          <!-- activities -->
+          <section class="widget widget--activities">
+            <div class="widget__head">
+              <h2 class="widget__title">الأنشطة الحديثة</h2>
+            </div>
+
+            <div class="activities">
+              <article class="activity activity--blue">
+                <span class="activity__icon">
+                  <img class="icon" src="assets/icons/user-plus-solid-full.png" alt="" />
+                </span>
+                <div class="activity__body">
+                  <div class="activity__top">
+                    <h3 class="activity__name">إنشاء حساب توفير جديد</h3>
+                    <span class="activity__tag activity__tag--blue">حساب</span>
+                  </div>
+                  <p class="activity__desc">تم إنشاء حساب توفير بنك الأهلي بنجاح</p>
+                  <span class="activity__time">منذ ساعة واحدة</span>
+                </div>
+              </article>
+
+              <article class="activity activity--green">
+                <span class="activity__icon">
+                  <img
+                    class="icon"
+                    src="assets/icons/credit-card-solid-full-green.png"
+                    alt=""
+                  />
+                </span>
+                <div class="activity__body">
+                  <div class="activity__top">
+                    <h3 class="activity__name">إضافة بطاقة جديدة</h3>
+                    <span class="activity__tag activity__tag--green">بطاقة</span>
+                  </div>
+                  <p class="activity__desc">تمت إضافة بطاقة Visa الجديدة ****2847</p>
+                  <span class="activity__time">منذ 3 ساعات</span>
+                </div>
+              </article>
+            </div>
+
+            <button class="widget__button" type="button">عرض جميع الأنشطة (23)</button>
+          </section>
+
+          <!-- transactions -->
+          <section class="widget widget--transactions">
+            <div class="widget__head">
+              <h2 class="widget__title">المعاملات الأخيرة</h2>
+              <button class="widget__link" type="button">عرض الكل</button>
+            </div>
+
+            <div class="table-wrap">
+              <table class="transactions">
+                <thead>
+                  <tr>
+                    <th>المعاملة</th>
+                    <th>الفئة</th>
+                    <th>التاريخ</th>
+                    <th>الحالة</th>
+                    <th>المبلغ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="person">
+                        <img class="person__avatar" src="assets/avatar-1.jpg" alt="" />
+                        <span class="person__text">
+                          <strong>محمود النجار</strong>
+                          <small>تحويل أموال</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--green">دخل</span></td>
+                    <td class="cell-muted">١٤ أكتوبر ٢٠٢٥</td>
+                    <td><span class="pill pill--green">مكتمل</span></td>
+                    <td class="amount amount--in">+350 جنية</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="person">
+                        <span class="person__circle person__circle--orange">
+                          <img class="icon" src="assets/icons/utensils-solid-full.png" alt="" />
+                        </span>
+                        <span class="person__text">
+                          <strong>مطعم Meat moot</strong>
+                          <small>دفع مطعم</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--orange">طعام</span></td>
+                    <td class="cell-muted">14 أكتوبر، 2025</td>
+                    <td><span class="pill pill--green">مكتمل</span></td>
+                    <td class="amount amount--out">-2200 جنية</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="person">
+                        <span class="person__circle person__circle--blue">
+                          <img
+                            class="icon"
+                            src="assets/icons/cart-shopping-solid-full-blue.png"
+                            alt=""
+                          />
+                        </span>
+                        <span class="person__text">
+                          <strong>مشتريات Amazon</strong>
+                          <small>تسوق إلكتروني</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--blue">تسوق</span></td>
+                    <td class="cell-muted">13 أكتوبر، 2025</td>
+                    <td><span class="pill pill--green">مكتمل</span></td>
+                    <td class="amount amount--out">-1250 جنية</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="person">
+                        <img class="person__avatar" src="assets/avatar-2.jpg" alt="" />
+                        <span class="person__text">
+                          <strong>عمر المهدي</strong>
+                          <small>دفع فاتورة مقسمة</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--purple">فاتورة مقسمة</span></td>
+                    <td class="cell-muted">13 أكتوبر، 2025</td>
+                    <td><span class="pill pill--green">مكتمل</span></td>
+                    <td class="amount amount--out">-1400 جنية</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="person">
+                        <img class="person__avatar" src="assets/avatar-3.jpg" alt="" />
+                        <span class="person__text">
+                          <strong>محمد عوض</strong>
+                          <small>دفع عمل حر</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--green">عمل</span></td>
+                    <td class="cell-muted">12 أكتوبر، 2025</td>
+                    <td><span class="pill pill--green">مكتمل</span></td>
+                    <td class="amount amount--in">+2500 جنية</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="person">
+                        <span class="person__circle person__circle--red">
+                          <img class="icon" src="assets/icons/gas-pump-solid-full.png" alt="" />
+                        </span>
+                        <span class="person__text">
+                          <strong>محطة وقود Shell</strong>
+                          <small>شراء وقود</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--red">مواصلات</span></td>
+                    <td class="cell-muted">12 أكتوبر، 2025</td>
+                    <td><span class="pill pill--amber">معلق</span></td>
+                    <td class="amount amount--out">-700 جنية</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="person">
+                        <span class="person__circle person__circle--indigo">
+                          <img
+                            class="icon"
+                            src="assets/icons/tv-solid-full-violet.png"
+                            alt=""
+                          />
+                        </span>
+                        <span class="person__text">
+                          <strong>اشتراك Netflix</strong>
+                          <small>اشتراك شهري</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--indigo">ترفيه</span></td>
+                    <td class="cell-muted">11 أكتوبر، 2025</td>
+                    <td><span class="pill pill--green">مكتمل</span></td>
+                    <td class="amount amount--out">-780 جنية</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="person">
+                        <span class="person__circle person__circle--cyan">
+                          <img class="icon" src="assets/icons/dumbbell-solid-full.png" alt="" />
+                        </span>
+                        <span class="person__text">
+                          <strong>نادي FitLife</strong>
+                          <small>عضوية شهرية</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--cyan">صحة</span></td>
+                    <td class="cell-muted">10 أكتوبر، 2025</td>
+                    <td><span class="pill pill--green">مكتمل</span></td>
+                    <td class="amount amount--out">-500 جنية</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="person">
+                        <span class="person__circle person__circle--emerald">
+                          <img
+                            class="icon"
+                            src="assets/icons/graduation-cap-solid-full.png"
+                            alt=""
+                          />
+                        </span>
+                        <span class="person__text">
+                          <strong>كورس Jonas</strong>
+                          <small>دورة تدريبية</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="pill pill--emerald">تعليم</span></td>
+                    <td class="cell-muted">9 أكتوبر، 2025</td>
+                    <td><span class="pill pill--green">مكتمل</span></td>
+                    <td class="amount amount--out">-250 جنية</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- bills -->
+          <section class="widget widget--bills">
+            <div class="widget__head">
+              <h2 class="widget__title">الفواتير الشهرية</h2>
+              <button class="widget__link" type="button">عرض الكل</button>
+            </div>
+
+            <div class="bills-total">
+              <strong>1920 جنية</strong>
+              <span>إجمالي الفواتير الشهرية</span>
+            </div>
+
+            <div class="bills">
+              <article class="bill">
+                <span class="bill__icon bill__icon--blue">
+                  <img class="icon" src="assets/icons/wifi-solid-full.png" alt="" />
+                </span>
+                <span class="bill__name">إنترنت</span>
+                <strong class="bill__value">450 جنية</strong>
+                <span class="bill__due">يستحق في 3 أيام</span>
+              </article>
+              <article class="bill">
+                <span class="bill__icon bill__icon--orange">
+                  <img class="icon" src="assets/icons/bolt-solid-full.png" alt="" />
+                </span>
+                <span class="bill__name">كهرباء</span>
+                <strong class="bill__value">400 جنية</strong>
+                <span class="bill__due">يستحق في 5 أيام</span>
+              </article>
+              <article class="bill">
+                <span class="bill__icon bill__icon--green">
+                  <img class="icon" src="assets/icons/phone-solid-full.png" alt="" />
+                </span>
+                <span class="bill__name">هاتف</span>
+                <strong class="bill__value">290 جنية</strong>
+                <span class="bill__due">يستحق في 10 أيام</span>
+              </article>
+              <article class="bill">
+                <span class="bill__icon bill__icon--red">
+                  <img class="icon" src="assets/icons/tv-solid-full-red.png" alt="" />
+                </span>
+                <span class="bill__name">Netflix</span>
+                <strong class="bill__value">780 جنية</strong>
+                <span class="bill__due">يستحق في 15 يوم</span>
+              </article>
+            </div>
+          </section>
+
+          <!-- budget overview -->
+          <section class="widget widget--budget">
+            <div class="widget__head">
+              <h2 class="widget__title">نظرة عامة على الميزانية</h2>
+              <button class="widget__link" type="button">التفاصيل</button>
+            </div>
+
+            <div class="budget-total">
+              <div class="budget-total__row">
+                <div>
+                  <span class="budget-total__label">إجمالي الميزانية</span>
+                  <strong class="budget-total__value">10000 جنية</strong>
+                </div>
+                <div class="budget-total__left">
+                  <span class="budget-total__label">المتبقي</span>
+                  <strong class="budget-total__remaining">1750 جنية</strong>
+                </div>
+              </div>
+              <div class="budget-total__meta">
+                <span>المستخدم: 8250 جنية</span>
+                <span>82.5%</span>
+              </div>
+              <div class="progress">
+                <span class="progress__fill" style="width: 84%"></span>
+              </div>
+            </div>
+
+            <div class="budget-list">
+              <article class="budget-item">
+                <span class="budget-item__icon budget-item__icon--orange">
+                  <img
+                    class="icon icon--orange"
+                    src="assets/icons/tv-solid-full-violet.png"
+                    alt=""
+                  />
+                </span>
+                <div class="budget-item__body">
+                  <div class="budget-item__top">
+                    <div class="budget-item__info">
+                      <strong>ترفيه</strong>
+                      <span class="budget-item__limit">الميزانية: 1500 جنية</span>
+                    </div>
+                    <div class="budget-item__figures">
+                      <span class="budget-item__amount">750 جنية</span>
+                      <span class="budget-item__note budget-item__note--green">متبقي 50%</span>
+                    </div>
+                  </div>
+                  <div class="progress progress--small">
+                    <span class="progress__fill progress__fill--orange" style="width: 50%"></span>
+                  </div>
+                </div>
+              </article>
+              <article class="budget-item">
+                <span class="budget-item__icon budget-item__icon--red">
+                  <img
+                    class="icon icon--red"
+                    src="assets/icons/file-invoice-dollar-solid-full.png"
+                    alt=""
+                  />
+                </span>
+                <div class="budget-item__body">
+                  <div class="budget-item__top">
+                    <div class="budget-item__info">
+                      <strong>فواتير</strong>
+                      <span class="budget-item__limit">الميزانية: 2000 جنية</span>
+                    </div>
+                    <div class="budget-item__figures">
+                      <span class="budget-item__amount">2000 جنية</span>
+                      <span class="budget-item__note budget-item__note--red">مستخدم 100%</span>
+                    </div>
+                  </div>
+                  <div class="progress progress--small">
+                    <span class="progress__fill progress__fill--red" style="width: 100%"></span>
+                  </div>
+                </div>
+              </article>
+              <article class="budget-item">
+                <span class="budget-item__icon budget-item__icon--pink">
+                  <img class="icon" src="assets/icons/heart-solid-full.png" alt="" />
+                </span>
+                <div class="budget-item__body">
+                  <div class="budget-item__top">
+                    <div class="budget-item__info">
+                      <strong>العناية الشخصية</strong>
+                      <span class="budget-item__limit">الميزانية: 1500 جنية</span>
+                    </div>
+                    <div class="budget-item__figures">
+                      <span class="budget-item__amount">1200 جنية</span>
+                      <span class="budget-item__note budget-item__note--yellow">متبقي 20%</span>
+                    </div>
+                  </div>
+                  <div class="progress progress--small">
+                    <span class="progress__fill progress__fill--pink" style="width: 80%"></span>
+                  </div>
+                </div>
+              </article>
+              <article class="budget-item">
+                <span class="budget-item__icon budget-item__icon--green">
+                  <img
+                    class="icon"
+                    src="assets/icons/cart-shopping-solid-full-green.png"
+                    alt=""
+                  />
+                </span>
+                <div class="budget-item__body">
+                  <div class="budget-item__top">
+                    <div class="budget-item__info">
+                      <strong>مستلزمات المنزل</strong>
+                      <span class="budget-item__limit">الميزانية: 5000 جنية</span>
+                    </div>
+                    <div class="budget-item__figures">
+                      <span class="budget-item__amount">4300 جنية</span>
+                      <span class="budget-item__note budget-item__note--green">متبقي 14%</span>
+                    </div>
+                  </div>
+                  <div class="progress progress--small">
+                    <span class="progress__fill progress__fill--green" style="width: 86%"></span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- income vs expenses -->
+          <section class="widget widget--chart">
+            <div class="widget__head">
+              <h2 class="widget__title">الدخل مقابل المصروفات</h2>
+              <button class="widget__link" type="button">التحليل</button>
+            </div>
+
+            <div class="chart">
+              <div class="chart__legend">
+                <span class="chart__item"><i class="chart__dot chart__dot--income"></i>الدخل</span>
+                <span class="chart__item"><i class="chart__dot chart__dot--expense"></i>المصروفات</span>
+              </div>
+              <div class="chart__groups">
+                <div class="chart__group">
+                  <div class="chart__bars">
+                    <span class="chart__bar chart__bar--income" style="height: 95px"></span>
+                    <span class="chart__bar chart__bar--expense" style="height: 42px"></span>
+                  </div>
+                  <span class="chart__label">الأسبوع 1</span>
+                </div>
+                <div class="chart__group">
+                  <div class="chart__bars">
+                    <span class="chart__bar chart__bar--income" style="height: 98px"></span>
+                    <span class="chart__bar chart__bar--expense" style="height: 45px"></span>
+                  </div>
+                  <span class="chart__label">الأسبوع 2</span>
+                </div>
+                <div class="chart__group">
+                  <div class="chart__bars">
+                    <span class="chart__bar chart__bar--income" style="height: 92px"></span>
+                    <span class="chart__bar chart__bar--expense" style="height: 38px"></span>
+                  </div>
+                  <span class="chart__label">الأسبوع 3</span>
+                </div>
+                <div class="chart__group">
+                  <div class="chart__bars">
+                    <span class="chart__bar chart__bar--income" style="height: 96px"></span>
+                    <span class="chart__bar chart__bar--expense" style="height: 45px"></span>
+                  </div>
+                  <span class="chart__label">الأسبوع 4</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- payment methods -->
+          <section class="widget widget--payment">
+            <div class="widget__head">
+              <h2 class="widget__title">وسائل الدفع</h2>
+              <button class="widget__link" type="button">إدارة</button>
+            </div>
+
+            <div class="payment-list">
+              <article class="payment">
+                <div class="payment__inner">
+                  <div class="payment__front payment__front--indigo">
+                    <span class="payment__badge">أساسية</span>
+                    <div class="payment__top">
+                      <span class="payment__chip"></span>
+                      <img
+                        class="payment__brand"
+                        src="assets/icons/cc-visa-brands-solid-full.png"
+                        alt="Visa"
+                      />
+                    </div>
+                    <div class="payment__details">
+                      <p class="payment__number">•••• •••• •••• 4532</p>
+                      <div class="payment__bottom">
+                        <span><small>حامل البطاقة</small><strong>سيف أسامة</strong></span>
+                        <span><small>تنتهي</small><strong>12/26</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="payment__back">
+                    <span class="payment__stripe"></span>
+                    <span class="payment__microprint">توقيع معتمد - غير صالحة بدون توقيع</span>
+                    <div class="payment__signature">
+                      <span class="payment__scribble"></span>
+                      <span class="payment__last4">4532</span>
+                    </div>
+                    <div class="payment__cvv-row">
+                      <span class="payment__cvv-group">
+                        <small class="payment__cvv-label">CVV</small>
+                        <strong class="payment__cvv-box">123</strong>
+                      </span>
+                      <span class="payment__cvv-spacer"></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="payment">
+                <div class="payment__inner">
+                  <div class="payment__front payment__front--rose">
+                    <div class="payment__top">
+                      <span class="payment__chip"></span>
+                      <img
+                        class="payment__brand"
+                        src="assets/icons/cc-mastercard-brands-solid-full.png"
+                        alt="Mastercard"
+                      />
+                    </div>
+                    <div class="payment__details">
+                      <p class="payment__number">•••• •••• •••• 8901</p>
+                      <div class="payment__bottom">
+                        <span><small>حامل البطاقة</small><strong>سيف أسامة</strong></span>
+                        <span><small>تنتهي</small><strong>08/27</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="payment__back">
+                    <span class="payment__stripe"></span>
+                    <span class="payment__microprint">توقيع معتمد - غير صالحة بدون توقيع</span>
+                    <div class="payment__signature">
+                      <span class="payment__scribble"></span>
+                      <span class="payment__last4">8901</span>
+                    </div>
+                    <div class="payment__cvv-row">
+                      <span class="payment__cvv-group">
+                        <small class="payment__cvv-label">CVV</small>
+                        <strong class="payment__cvv-box">456</strong>
+                      </span>
+                      <span class="payment__cvv-spacer"></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="payment">
+                <div class="payment__inner">
+                  <div class="payment__front payment__front--blue">
+                    <div class="payment__top">
+                      <span class="payment__chip"></span>
+                      <img
+                        class="payment__brand"
+                        src="assets/icons/paypal-brands-solid-full.png"
+                        alt="Paypal"
+                      />
+                    </div>
+                    <div class="payment__details">
+                      <p class="payment__title">حساب Paypal</p>
+                      <div class="payment__bottom">
+                        <span><small>الإيميل</small><strong>seif@example.com</strong></span>
+                        <span><small>الحالة</small><strong class="payment__status">موثق</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="payment__back">
+                    <span class="payment__stripe"></span>
+                    <span class="payment__microprint">توقيع معتمد - غير صالحة بدون توقيع</span>
+                    <div class="payment__signature">
+                      <span class="payment__scribble"></span>
+                      <span class="payment__last4">PP01</span>
+                    </div>
+                    <div class="payment__cvv-row">
+                      <span class="payment__cvv-group">
+                        <small class="payment__cvv-label">ID</small>
+                        <strong class="payment__cvv-box">PP-01</strong>
+                      </span>
+                      <span class="payment__cvv-spacer"></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- account summary -->
+          <section class="widget widget--account">
+            <div class="widget__head">
+              <h2 class="widget__title">ملخص الحساب</h2>
+              <button class="widget__link" type="button">التفاصيل</button>
+            </div>
+
+            <div class="accounts">
+              <article class="account">
+                <div class="account__main">
+                  <span class="account__icon account__icon--blue">
+                    <img class="icon" src="assets/icons/building-columns-solid-full.png" alt="" />
+                  </span>
+                  <span class="account__info">
+                    <strong>حساب جاري</strong>
+                    <small>بنك مصر [•••• 4532]</small>
+                  </span>
+                </div>
+                <strong class="account__value">8,450 جنية</strong>
+              </article>
+              <article class="account">
+                <div class="account__main">
+                  <span class="account__icon account__icon--green">
+                    <img class="icon icon--green" src="assets/icons/piggy-bank-solid.png" alt="" />
+                  </span>
+                  <span class="account__info">
+                    <strong>حساب التوفير</strong>
+                    <small>بنك مصر [•••• 8901]</small>
+                  </span>
+                </div>
+                <strong class="account__value">297,540 جنية</strong>
+              </article>
+              <article class="account">
+                <div class="account__main">
+                  <span class="account__icon account__icon--violet">
+                    <img
+                      class="icon"
+                      src="assets/icons/credit-card-solid-full-violet.png"
+                      alt=""
+                    />
+                  </span>
+                  <span class="account__info">
+                    <strong>بطاقة ائتمان</strong>
+                    <small>متاح: 1,850 جنية من 2,500 جنية</small>
+                  </span>
+                </div>
+                <strong class="account__value account__value--out">- 6,000 جنية</strong>
+              </article>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

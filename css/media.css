@@ -1,0 +1,299 @@
+/* small screens */
+@media screen and (max-width: 767px) {
+  .app {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sidebar {
+    display: none;
+  }
+  .main {
+    padding: 20px;
+  }
+
+  .page-header {
+    margin-bottom: 24px;
+  }
+  .page-header__bar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+  .page-header__brand {
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+  .page-header__mark {
+    width: 48px;
+    height: 48px;
+  }
+  .page-header__mark .icon {
+    width: 18px;
+    height: 18px;
+  }
+  .page-header__title {
+    font-size: 24px;
+  }
+  .page-header__subtitle {
+    font-size: 12px;
+  }
+  .status {
+    display: none;
+  }
+  .status--mobile {
+    display: grid;
+    grid-template-columns: 8px auto;
+    justify-content: center;
+    width: 100%;
+    margin-top: 12px;
+  }
+  .page-header__tools {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .page-header__buttons {
+    gap: 4px;
+  }
+  .icon-button {
+    width: 32px;
+    height: 32px;
+  }
+  .badge {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+  }
+  .profile__text,
+  .profile__plan {
+    display: none;
+  }
+  .profile__avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .summary {
+    gap: 16px;
+  }
+  .summary-card {
+    padding: 24px;
+  }
+  .summary-card__value {
+    font-size: 30px;
+  }
+
+  .widget {
+    padding: 16px;
+  }
+  .widget__title {
+    font-size: 16px;
+  }
+  .widget__link {
+    font-size: 12px;
+  }
+  .activity__name {
+    font-size: 13px;
+  }
+  .chart__groups {
+    height: 160px;
+  }
+  .bills-total strong {
+    font-size: 26px;
+  }
+  .payment__front {
+    padding: 20px;
+  }
+  .account {
+    padding: 12px;
+  }
+  .account__value {
+    font-size: 12px;
+  }
+  .widget--account {
+    order: 1;
+  }
+  .widget--payment {
+    order: 2;
+  }
+}
+
+/* tablet screens */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .app {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .sidebar__inner {
+    padding: 12px;
+  }
+
+  .brand {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .brand__mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+  .brand__text,
+  .nav__label,
+  .quick__title,
+  .action__label {
+    display: none;
+  }
+
+  .nav__link {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 12px 8px;
+  }
+
+  .action {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0;
+  }
+
+  .quick {
+    margin-top: 16px;
+  }
+
+  .summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .summary-card {
+    padding: 24px;
+  }
+  .summary-card__value {
+    font-size: 30px;
+  }
+
+  .widgets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .widget--activities {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .widget--chart {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .widget--transactions {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+  .widget--bills {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .widget--account {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .widget--budget {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .widget--payment {
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+
+/* desktop screens */
+@media screen and (min-width: 1280px) {
+  .app {
+    grid-template-columns: 256px minmax(0, 1fr);
+  }
+
+  .summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .widgets {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+  .widget--activities {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .widget--transactions {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+  .widget--bills {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .widget--budget {
+    grid-column: 1;
+    grid-row: 3 / 7;
+  }
+  .widget--chart {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .widget--payment {
+    grid-column: 3;
+    grid-row: 3 / 5;
+  }
+  .widget--account {
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+
+/* account rows on tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .account {
+    flex-direction: column;
+    align-items: center;
+  }
+  .account__main {
+    align-self: flex-start;
+  }
+  .account__value {
+    align-self: flex-end;
+  }
+}
+
+/* budget stacked rows */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .budget-total__row,
+  .budget-item__top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .budget-total__left,
+  .budget-item__figures {
+    justify-self: end;
+  }
+  .budget-item__info {
+    justify-self: start;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1535px) {
+  .budget-total__row,
+  .budget-item__top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .budget-total__left,
+  .budget-item__figures {
+    justify-self: end;
+  }
+  .budget-item__info {
+    justify-self: start;
+  }
+}
+
+/* wide screens */
+@media screen and (min-width: 1600px) {
+  .main {
+    padding: 48px;
+  }
+}
